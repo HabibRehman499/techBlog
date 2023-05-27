@@ -1,7 +1,10 @@
 <template>
  
  <!-- git push -u origin main -->
+ <div class="container" style="display: flex;
+      flex-direction: column;font-size: 24px;">
 
+ 
 
   <el-menu
     :default-active="activeIndex"
@@ -40,6 +43,7 @@
     </el-menu-item>
   </el-menu> 
   <router-view/>
+</div>
 </template>
 
 
@@ -55,10 +59,28 @@
   flex-grow: 1;
 }
 
+a{
+  text-decoration: none;
+}
 // #menu{
-//   background-color: aqua;
+//   background-color: rgb(99, 164, 174);
 // }
 
+el-menu-item{
+  font-weight: bolder;
+  
+}
+
+.fullscreen {
+      width: 100vw;
+      height: auto;
+      background-color: #f2f2f2;
+      
+      /* align-items: center; */
+      /* justify-content: center; */
+      /* text-align: center; */
+      
+    }
 </style>
 
 
