@@ -14,6 +14,7 @@
     :ellipsis="false"
     :collapse-transition="true"
     
+    
   >
     <el-menu-item index="0">
       <router-link to="/">Tech Talk</router-link>
@@ -68,13 +69,28 @@ a{
 
 el-menu-item{
   font-weight: bolder;
+  // position: fixed;
+ 
   
+}
+
+.el-menu--horizontal {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: solid 1px var(--el-menu-border-color);
+    border-right: none;
+    position: fixed;
+   width: 85.4%;
+    z-index: 9999 !important;
+    box-shadow: 0 1px 15px -1px rgba(0,0,0,.25);
+    
 }
 
 .fullscreen {
       width: 100vw;
       height: auto;
       background-color: #f2f2f2;
+    
       
       /* align-items: center; */
       /* justify-content: center; */
