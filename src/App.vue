@@ -8,7 +8,7 @@
 
   <el-menu
     :default-active="activeIndex"
-    class="el-menu-demo"
+    class=""
     id="menu"
     mode="horizontal"
     :ellipsis="false"
@@ -62,6 +62,7 @@
 
 a{
   text-decoration: none;
+  // color: white !important;
 }
 // #menu{
 //   background-color: rgb(99, 164, 174);
@@ -69,6 +70,7 @@ a{
 
 el-menu-item{
   font-weight: bolder;
+
   // position: fixed;
  
   
@@ -79,24 +81,30 @@ el-menu-item{
     flex-wrap: nowrap;
     border-bottom: solid 1px var(--el-menu-border-color);
     border-right: none;
-    position: fixed;
-   width: 85.4%;
+    // position: fixed;
+ 
     z-index: 9999 !important;
     box-shadow: 0 1px 15px -1px rgba(0,0,0,.25);
+    // background-color: #282e3a;
+ 
+    width: 100%;
+    // justify-content: center;
+   
+    // left: 0;
     
 }
 
-.fullscreen {
-      width: 100vw;
-      height: auto;
-      background-color: #f2f2f2;
+// .fullscreen {
+//       width: 100vw;
+//       height: auto;
+//       background-color: #f2f2f2;
     
       
-      /* align-items: center; */
-      /* justify-content: center; */
-      /* text-align: center; */
+//       /* align-items: center; */
+//       /* justify-content: center; */
+//       /* text-align: center; */
       
-    }
+//     }
 </style>
 
 
