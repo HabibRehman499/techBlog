@@ -119,9 +119,7 @@
       </div>
     </el-col>
     <el-col :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
-      
-        <div id="innerFooter"><i>LINKS</i></div>
-     
+      <div id="innerFooter"><i>LINKS</i></div>
     </el-col>
     <el-col :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
       <div id="innerFooter"><i>Address</i></div>
