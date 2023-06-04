@@ -19,20 +19,20 @@
     <el-menu-item index="0">
       <router-link to="/">Tech Talk</router-link>
     </el-menu-item>
-    <div class="flex-grow" />
+    <div class="flex-grow" ></div>
     <el-menu-item index="1">
       <router-link to="/">Home</router-link>
     </el-menu-item>
     <el-sub-menu index="2">
       <template #title>Article</template>
       <el-menu-item index="2-1">
-        <router-link to="/">Technologies</router-link>
+        <router-link to="/technology">Technologies</router-link>
       </el-menu-item>
       <el-menu-item index="2-2">
-        <router-link to="/">Gamming</router-link>
+        <router-link to="/gamming">Gamming</router-link>
       </el-menu-item>
       <el-menu-item index="2-3">
-        <router-link to="/">Fashion & Design</router-link>
+        <router-link to="/fashion_Designing">Fashion & Design</router-link>
       </el-menu-item>
             
     </el-sub-menu>

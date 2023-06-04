@@ -1,6 +1,6 @@
 <template>
   <!-- header -->
-  <el-row :gutter="0">
+  <el-row :gutter="0" style="margin-top: 1%">
     <el-col :xs="24" :md="24" :lg="24" :xl="24" :offset="0">
       <img
         src="../assets/TechTalk.png"
@@ -11,50 +11,59 @@
   </el-row>
 
   <div>
-    <h2 id="cardsHeading">Explore Topics</h2>
+    <h2 id="cardsHeading" style="margin-top: 2%">Explore Topics</h2>
   </div>
 
   <!-- Cards -->
-  <el-row id="cards" :gutter="0">
+  <el-row id="cards" :gutter="0" style="margin-top: 1%">
     <!-- Card 1 Technology -->
     <el-col id="cardsCol" :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
-      <el-card shadow="always" :body-style="{ padding: '20px' }">
-        <div slot="header" style="text-align: center; padding-bottom: 0px">
-          <span id="cardsHeading">Technology</span>
-        </div>
-        <img
-          src="../assets/technology.png"
-          style="height: 400px !important"
-          alt=""
-        />
-      </el-card>
+      <router-link to="/technology">
+        <el-card shadow="always" :body-style="{ padding: '10px' }">
+          <div slot="header" style="text-align: center; padding-bottom: 0px">
+            <span id="cardsHeading">Technology</span>
+          </div>
+
+          <img
+            src="../assets/technology.png"
+            style="height: 400px !important"
+            alt=""
+          />
+        </el-card>
+      </router-link>
+      <!-- <router-view/> -->
     </el-col>
     <!-- Card 2 Gamming -->
     <el-col id="cardsCol" :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
-      <el-card shadow="always" :body-style="{ padding: '20px' }">
-        <div slot="header" style="text-align: center; padding-bottom: 0px">
-          <span id="cardsHeading">Gamming</span>
-        </div>
-        <img
-          src="../assets/gamming.png"
-          style="height: 400px !important"
-          alt=""
-        />
-      </el-card>
+      <router-link to="/gamming">
+        <el-card shadow="always" :body-style="{ padding: '10px' }">
+          <div slot="header" style="text-align: center; padding-bottom: 0px">
+            <span id="cardsHeading">Gamming</span>
+          </div>
+          <img
+            src="../assets/gamming.png"
+            style="height: 400px !important"
+            alt=""
+          />
+        </el-card>
+      </router-link>
     </el-col>
+
     <!-- Card 3 Fashion & Designing -->
     <el-col id="cardsCol" :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
-      <el-card shadow="always" :body-style="{ padding: '20px' }">
-        <div slot="header" style="text-align: center; padding-bottom: 0px">
-          <span id="cardsHeading">Fashion & Designing</span>
-        </div>
-        <img src="../assets/fs.png" style="height: 400px !important" alt="" />
-      </el-card>
+      <router-link to="/fashion_Designing">
+        <el-card shadow="always" :body-style="{ padding: '10px' }">
+          <div slot="header" style="text-align: center; padding-bottom: 0px">
+            <span id="cardsHeading">Fashion & Designing</span>
+          </div>
+          <img src="../assets/fs.png" style="height: 400px !important" alt="" />
+        </el-card>
+      </router-link>
     </el-col>
   </el-row>
 
   <!-- Subscribe Newsletter -->
-  <el-row :gutter="0" id="subscribeEmail">
+  <el-row :gutter="0" id="subscribeEmail" style="margin-top: 1%">
     <el-col :xs="24" :md="12" :lg="12" :xl="12" :offset="0">
       <div>
         <h3>Subscribe Newsletter</h3>
@@ -79,7 +88,7 @@
   </el-row>
 
   <!-- Follow Me -->
-  <el-row :gutter="0" id="followMe">
+  <el-row :gutter="0" id="followMe" style="margin-top: 1%">
     <el-col :xs="24" :md="12" :lg="12" :xl="12" :offset="0">
       <div>
         <h3>Follow Me</h3>
@@ -96,28 +105,41 @@
   </el-row>
 
   <!-- Footer -->
-  <el-row :gutter="0" id="footer">
-    <el-col :xs="24" :md="12" :lg="12" :xl="12" :offset="0">
-      <div style="display: flex; flex-direction: row">
-        <div id="innerFooter">
-          <h4>Tech Talk</h4>
-          <span>techtalk@gmail.com</span><br>
-          <span>+92 335 1724336</span>
-        </div>
-        <div id="innerFooter">
-          <i>CATEGORIES</i>
-        </div>
-        <div id="innerFooter"><i>LINKS</i></div>
-        <div id="innerFooter"><i>ADDRESS</i></div>
-        
-        
+  <el-row :gutter="0" id="footer" style="margin-top: 1%">
+    <el-col :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
+      <div id="innerFooter">
+        <h4>Tech Talk</h4>
+        <span>techtalk@gmail.com</span><br />
+        <span>+92 335 1724336</span>
       </div>
+    </el-col>
+    <el-col :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
+      <div id="innerFooter">
+        <i>CATEGORIES</i>
+      </div>
+    </el-col>
+    <el-col :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
+      
+        <div id="innerFooter"><i>LINKS</i></div>
+     
+    </el-col>
+    <el-col :xs="24" :md="6" :lg="6" :xl="6" :offset="0">
+      <div id="innerFooter"><i>Address</i></div>
     </el-col>
   </el-row>
 </template>
 
 <script>
+import Technology from "../components/Technology.vue";
+import Gamming from "../components/Gamming.vue";
+import FashionAndDesigning from "../components/FashionAndDesigning.vue";
+
 export default {
+  components: {
+    Technology,
+    FashionAndDesigning,
+    Gamming,
+  },
   data() {
     return {
       form: {
@@ -143,8 +165,8 @@ img {
   object-fit: fill;
   z-index: 10;
 }
-.headerVideo {
-  width: 100%;
+.maginBetweenDiv {
+  margin-top: 2%;
 }
 
 #cards {
@@ -187,13 +209,13 @@ img {
   /* border:2px solid black; */
   align-items: center;
   /* justify-content: center; */
-  padding-left:20% !important;
-  padding: 1% 2%;
+  /* padding-left: 20% !important; */
+  padding: 2% 2%;
   background-color: #282e3a;
   color: white;
   /* text-align: center; */
 }
-#innerFooter{
+#innerFooter {
   margin: 3%;
 }
 

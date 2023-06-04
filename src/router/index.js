@@ -1,13 +1,29 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
-import ContactView from '../views/ContactView.vue'
+import Technology from '../components/Technology.vue'
+import Gamming from '../components/Gamming.vue'
+import FashionAndDesigning from '../components/FashionAndDesigning.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/technology',
+    name: 'technology',
+    component: Technology
+  },
+  {
+    path: '/gamming',
+    name: 'gamming',
+    component: Gamming
+  },
+  {
+    path: '/fashion_Designing',
+    name: 'fashion_Designing',
+    component: FashionAndDesigning
   },
   {
     path: '/about',
@@ -24,7 +40,8 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "contactUs" */ '../views/ContactView.vue')
     }
-  }
+  },
+ 
 ]
 
 const router = createRouter({
